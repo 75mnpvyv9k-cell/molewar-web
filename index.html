@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html,body{margin:0;height:100%;background:#291c14;color:#e8d8c0;font:16px sans-serif;display:flex;align-items:center;justify-content:center}</style>
+</head><body>読み込み中…
+<script>
+fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
+  .then((r) => r.text())
+  .then((v) => location.replace('play.html?v=' + v.trim()))
+  .catch(() => location.replace('play.html?v=' + Date.now()));
+</script>
+</body></html>
